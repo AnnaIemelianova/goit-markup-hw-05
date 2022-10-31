@@ -418,24 +418,21 @@ body {
     width: 100%;
     height: 100%;
     border-radius: 50%;
+    color: var(--svg-border-color);
 
-    transition: background-color 250ms var(--timing-function);
+    transition: background-color 250ms var(--timing-function), color 250ms var(--timing-function);
 }
 
 .socials-icon {
-    fill: var(--svg-border-color);
-    transition: fill 250ms var(--timing-function);
+    fill: currentColor;
 }
 
 .socials-link:hover,
 .socials-link:focus {
     background-color: var(--blue-color);
+    color: var(--white-color);
 }
 
-.socials-link:hover .socials-icon,
-.socials-link:focus .socials-icon {
-    fill: var(--white-color);
-}
 
 /* clients section----------------------------------------------------------- */
 
@@ -665,7 +662,8 @@ body {
     padding: 63px 24px;
 }
 
-.products-item:hover .products-text {
+.products-link:hover .products-text,
+.products-link:focus .products-text {
     transform: translateY(0);
 }
 
